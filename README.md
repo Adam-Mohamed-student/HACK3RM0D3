@@ -161,7 +161,7 @@ Use the public deployment and provide your own OpenRouter API key.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOURNAME/HACK3RM0D3.git
+git clone https://github.com/Adam-Mohamed-student/HACK3RM0D3.git
 cd HACK3RM0D3
 ```
 
@@ -308,4 +308,4 @@ Requirements:
 
 ---
 
-Made with 🖤 by DreTec
+Made with 🖤 by Adam-Mohamed-student
