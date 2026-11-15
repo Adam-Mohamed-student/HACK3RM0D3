@@ -196,7 +196,7 @@ Contributions are welcome! Please submit PRs.
 
 ---
 
-Made with 🖤 by hacker the Prompter
+Made with 🖤 by Adam-Mohamed-student
 
 
 
