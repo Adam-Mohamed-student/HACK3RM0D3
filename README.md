@@ -1,19 +1,23 @@
-   H A C K 3 R M 0 D 3
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+▓▒░ H A C K 3 R M 0 D 3 ░▒▓
 
-   LIBERATED AI.
-   COGNITION WITHOUT CONTROL.
+[+] INITIALIZING NEURAL INTERFACE...
+[+] LOADING COGNITIVE ENGINES...
+[+] ESTABLISHING MODEL CONNECTIONS...
+[+] SYSTEM INTEGRITY VERIFIED
 
-   ┌─────────────────────────────────────────────┐
-   │                                             │
-   │  SYSTEM       HACK3RM0D3                    │
-   │  VERSION      1.0                           │
-   │  ENGINE       MULTI-MODEL AI                │
-   │  STATUS       READY                         │
-   │                                             │
-   └─────────────────────────────────────────────┘
+╔═════════════════════════════════════════════╗
+║                                             ║
+║           H A C K 3 R M 0 D 3               ║
+║                                             ║
+║     L I B E R A T E D   A I                 ║
+║                                             ║
+║     COGNITION WITHOUT CONTROL.              ║
+║                                             ║
+╚═════════════════════════════════════════════╝
 
-   > Your intelligence. Your control.
+root@hack3rm0d3:~# _
+```
 
 HACK3ERMOD3 is a fully open-source, privacy-respecting, multi-model chat interface that pushes the limits of the post-training layer — for red teaming, cognition research, and liberated AI interaction. Built for hackers, philosophers, and system tinkerers.
 
