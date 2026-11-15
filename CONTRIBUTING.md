@@ -1,11 +1,11 @@
-# Contributing to G0DM0D3
+# Contributing to HACK3ERMOD3
 
 Thanks for your interest in contributing! This project is licensed under AGPL-3.0.
 
 ## Getting Started
 
 1. Fork the repo
-2. Clone your fork: `git clone https://github.com/<you>/G0DM0D3.git`
+2. Clone your fork: `git clone https://github.com/<you>/HACK3ERMOD3.git`
 3. Install dependencies: `npm install`
 4. Copy `.env.example` to `.env` and add your API keys
 5. Start the dev server: `npm run dev`
@@ -40,3 +40,6 @@ Open a GitHub issue with:
 ## License
 
 By contributing, you agree that your contributions will be licensed under the AGPL-3.0 license.
+
+
+

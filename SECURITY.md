@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in G0DM0D3, please report it responsibly.
+If you discover a security vulnerability in HACK3ERMOD3, please report it responsibly.
 
 **Please do NOT open a public GitHub issue for security vulnerabilities.**
 
@@ -22,7 +22,7 @@ If you discover a security vulnerability in G0DM0D3, please report it responsibl
 ### Scope
 
 In scope:
-- The G0DM0D3 API server (`api/`)
+- The HACK3ERMOD3 API server (`api/`)
 - The frontend application (`src/`)
 - Docker / deployment configuration
 - Authentication and authorization logic
@@ -46,3 +46,6 @@ Out of scope:
 - **Headers:** HSTS, CSP, X-Content-Type-Options, X-Frame-Options, Permissions-Policy
 - **Docker:** Non-root containers, minimal base images
 - **Data:** Zero PII storage, opt-in dataset collection only
+
+
+

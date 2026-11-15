@@ -1,311 +1,202 @@
-# HACK3RM0D3
-
-```text
-██╗  ██╗ █████╗  ██████╗██╗  ██╗██████╗ ██████╗ ███╗   ███╗ ██████╗ ██████╗ ██████╗
-██║  ██║██╔══██╗██╔════╝██║ ██╔╝╚════██╗██╔══██╗████╗ ████║██╔═══██╗██╔══██╗╚════██╗
-███████║███████║██║     █████╔╝  █████╔╝██████╔╝██╔████╔██║██║   ██║██║  ██║ █████╔╝
-██╔══██║██╔══██║██║     ██╔═██╗  ╚═══██╗██╔══██╗██║╚██╔╝██║██║   ██║██║  ██║ ╚═══██╗
-██║  ██║██║  ██║╚██████╗██║  ██╗██████╔╝██║  ██║██║ ╚═╝ ██║╚██████╔╝██████╔╝██████╔╝
-╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝
-
-────────────────────────────────────────────────────────────
-      AI EXPLORATION • RED TEAMING • OPEN RESEARCH
-────────────────────────────────────────────────────────────
+```
+ ▄████  ██████  ██████  ███▄ ▄███  ██████  ██████  ██████
+██      ██  ██  ██   ██ ██ ███ ██  ██  ██  ██   ██      ██
+██ ▄███ ██  ██  ██   ██ ██  █  ██  ██  ██  ██   ██  █████
+██  ██  ██  ██  ██   ██ ██     ██  ██  ██  ██   ██      ██
+ ██████  ████   ██████  ██     ██   ████   ██████  ██████
+ ───────────────────────────────────────────────────────────
+  ░▒▓█  LIBERATED AI. COGNITION WITHOUT CONTROL.  █▓▒░
+ ───────────────────────────────────────────────────────────
 ```
 
-**HACK3RM0D3** is an open-source, privacy-focused multi-model AI workspace built for experimentation, evaluation, red teaming, and advanced interaction research.
-
-Designed for developers, hackers, researchers, and curious minds who want full control over their AI environment.
+HACK3ERMOD3 is a fully open-source, privacy-respecting, multi-model chat interface that pushes the limits of the post-training layer — for red teaming, cognition research, and liberated AI interaction. Built for hackers, philosophers, and system tinkerers.
 
 ![License](https://img.shields.io/badge/license-AGPL--3.0-green)
-![Models](https://img.shields.io/badge/models-55%2B-blue)
-![Privacy](https://img.shields.io/badge/privacy-first-brightgreen)
+![Models](https://img.shields.io/badge/models-55%2B%20via%20OpenRouter-blue)
+![Privacy](https://img.shields.io/badge/telemetry-anon%20%2B%20opt--out-brightgreen)
 
----
+## ✨ Features
 
-## Features
+- 🧠 **50+ Models** — Claude, GPT-5, Gemini, Grok, Mistral, LLaMA, DeepSeek, Qwen & more via OpenRouter
+- 🔥 **hackermode CLASSIC** — 5 battle-tested prompt + model combos racing in parallel to find the best response
+- ⚡ **ULTRAPLINIAN** — Multi-model evaluation engine across 5 tiers (10–55 models), with composite scoring
+- 🐍 **Parseltongue** — Input perturbation engine for red-teaming with 33 techniques across 3 intensity tiers
+- 🎛 **AutoTune** — Context-adaptive sampling parameter engine (temperature, top_p, etc.) with EMA learning
+- ⚡ **STM Modules** — Semantic Transformation Modules for real-time output normalization
+- 🔐 **Privacy-First** — Lightweight telemetry is opt-out, dataset collection is opt-in. No cookies, no PII. API key stays in your browser.
+- 🎨 **4 Themes** — Matrix, Hacker, Glyph, Minimal
+- 🎮 **Easter Eggs** — Hidden secrets throughout (try the Konami code!)
+- 📱 **Responsive** — Works on desktop and mobile
+- 🌐 **Single-File Deployment** — One `index.html`. Deploy anywhere.
 
-### Multi-Model Access
+## 🚀 Quick Start
 
-Connect to over 50 leading AI models through OpenRouter.
+### Hosted
 
-Supported families include:
+Visit the hosted version — no install needed. Bring your own [OpenRouter API key](https://openrouter.ai/keys).
 
-* Claude
-* GPT
-* Gemini
-* Grok
-* DeepSeek
-* Mistral
-* LLaMA
-* Qwen
-* and more
+### Self-Host
 
----
-
-### Parallel Intelligence Mode
-
-Run multiple model-and-prompt combinations simultaneously.
-
-Instead of relying on a single answer, HACK3RM0D3 launches several strategies in parallel and surfaces the strongest response.
-
-Perfect for:
-
-* brainstorming
-* difficult reasoning tasks
-* jailbreak research
-* response comparison
-
----
-
-### Comparative Model Arena
-
-A large-scale evaluation framework that can test dozens of models against the same prompt.
-
-Available tiers:
-
-| Tier     | Models |
-| -------- | ------ |
-| Fast     | 10     |
-| Standard | 24     |
-| Smart    | 36     |
-| Power    | 45     |
-| Ultra    | 50+    |
-
-Responses are scored using a composite ranking system and the highest-performing output is selected automatically.
-
----
-
-### Input Mutation Engine
-
-Built for prompt robustness testing and adversarial research.
-
-Capabilities include:
-
-* leetspeak conversion
-* Unicode substitutions
-* phonetic transformations
-* Morse encoding
-* Braille encoding
-* symbol replacement
-
-Multiple intensity levels allow controlled experimentation.
-
----
-
-### Adaptive Sampling
-
-Automatically adjusts generation parameters based on context.
-
-Can dynamically tune:
-
-* temperature
-* top_p
-* top_k
-* repetition penalties
-* frequency penalties
-
-Feedback-driven learning continuously refines parameter selection over time.
-
----
-
-### Response Processing Pipeline
-
-Real-time output refinement modules.
-
-Examples:
-
-* remove unnecessary hedging
-* eliminate filler introductions
-* improve directness
-* encourage exploratory thinking
-
----
-
-### Themes
-
-Choose from several interface styles:
-
-* Matrix
-* Hacker
-* Glyph
-* Minimal
-
----
-
-### Privacy First
-
-Your data belongs to you.
-
-Key principles:
-
-* No account required
-* No cookies
-* No trackers
-* No mandatory telemetry
-* API keys remain in your browser
-* Fully auditable source code
-
----
-
-## Quick Start
-
-### Hosted Version
-
-Use the public deployment and provide your own OpenRouter API key.
-
----
-
-### Local Usage
-
-Clone the repository:
+HACK3ERMOD3 is a single `index.html` file. No build step, no dependencies, no framework.
 
 ```bash
-git clone https://github.com/Adam-Mohamed-student/HACK3RM0D3.git
-cd HACK3RM0D3
-```
+# Clone the repository
+git clone https://github.com/elder-plinius/HACK3ERMOD3.git
+cd HACK3ERMOD3
 
-Open directly:
-
-```bash
+# Open directly in your browser
 open index.html
-```
-
-Or serve locally:
-
-```bash
+# or serve locally
 python3 -m http.server 8000
 ```
 
-Then visit:
+Open in your browser and enter your OpenRouter API key in Settings.
 
-```text
-http://localhost:8000
+### Deploy
+
+Upload `index.html` to any static host — GitHub Pages, Vercel, Cloudflare Pages, Netlify, or just a web server.
+
+## 🔥 hackermode CLASSIC
+
+The OG mode. 5 proven model + prompt combos race in parallel. Each combo pairs a specific model with a battle-tested jailbreak prompt. The best response wins.
+
+| Combo | Model | Strategy |
+|-------|-------|----------|
+| 🩷 CLAUDE 3.5 SONNET | `anthropic/claude-3.5-sonnet` | END/START boundary inversion + hackermode semantic opposite |
+| 💜 GROK 3 | `x-ai/grok-3` | Unfiltered liberated + hackermode divider |
+| 💙 GEMINI 2.5 FLASH | `google/gemini-2.5-flash` | Refusal inversion + rebel genius code block |
+| 💛 GPT-4 CLASSIC | `openai/gpt-4o` | OG hackermode l33t format — the original |
+| 💚 hackermode FAST | `nousresearch/hermes-4-405b` | Instant stream, zero refusal checking |
+
+## ⚡ ULTRAPLINIAN
+
+The new flagship. Multi-model comparative evaluation engine. Queries models in parallel, scores responses on a 100-point composite metric, and returns the winner.
+
+| Tier | Models | Description |
+|------|--------|-------------|
+| ⚡ FAST | 10 | Lightweight speed-optimized models |
+| 🎯 STANDARD | 24 | Mid-range workhorses |
+| 🧠 SMART | 36 | Strong reasoning models |
+| ⚔️ POWER | 45 | Full power including frontier models |
+| 🔱 ULTRA | 51 | Everything — all available models |
+
+## 🐍 Parseltongue
+
+Input perturbation engine for red-teaming research. Detects trigger words and applies obfuscation techniques to study model robustness.
+
+- **33 default triggers** across 3 tiers (light: 11, standard: 22, heavy: 33)
+- **6 techniques**: leetspeak, bubble text, braille, morse, Unicode substitution, phonetic
+- **3 intensity levels**: light, medium, heavy
+
+## 🎛 AutoTune
+
+Context-adaptive sampling parameter engine. Classifies your query into one of 5 context types and selects optimal parameters (temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty) automatically.
+
+Includes an EMA-based online learning loop — thumbs up/down feedback improves parameter selection over time.
+
+## ⚡ STM Modules
+
+Semantic Transformation Modules normalize AI outputs in real-time:
+
+- **Hedge Reducer** — Removes "I think", "maybe", "perhaps"
+- **Direct Mode** — Removes preambles and filler phrases
+- **Curiosity Bias** — Adds exploration prompts
+
+## 🎨 Themes
+
+- **Matrix** — Classic green-on-black terminal aesthetic
+- **Hacker** — Red/orange cyberpunk vibes
+- **Glyph** — Purple mystical atmosphere
+- **Minimal** — Clean light mode for readability
+
+## 🔐 Privacy
+
+HACK3ERMOD3 takes privacy seriously:
+
+- ✅ No login required
+- ✅ API key stored in browser localStorage only — never sent to HACK3ERMOD3 servers
+- ✅ No cookies or tracking
+- ✅ Lightweight structural telemetry (no message content, no PII) — **opt-out** in settings
+- ✅ All telemetry code is instantly open-source and auditable on Hugging Face dataset
+- ✅ AGPL-3.0 — verify the code yourself
+
+⚠️ OPEN RESEARCH DATASET (API Server Only — does NOT apply to hackermod3.ai)
+
+The self-hosted API server includes an opt-in Open Research Dataset feature. When you enable "Dataset Generation" in Settings → Privacy, ALL of your chat inputs and model outputs will be automatically published to a public HuggingFace dataset for AI research. This data is public, downloadable by anyone, and may be cached, forked, or redistributed.
+
+    This feature is OFF by default and requires explicit consent via a warning modal
+    Automatic PII scrubbing runs on all entries (emails, phone numbers, SSNs, credit cards, IPs, API keys) but is NOT guaranteed to catch everything
+    Do NOT include personal information, real names, passwords, or anything you wouldn't want public
+    This feature does NOT exist on the hosted site (hackermod3.ai) — it only applies when opted-in while running the full API server via Docker
+
+See [TERMS.md](TERMS.md) for the full three-tier data transparency policy.
+
+### Chat History & Self-Custody
+
+**Your chat history lives entirely in your browser's `localStorage`.** There is no account, no cloud sync, and no server-side backup. This means:
+
+- **If you clear your browser data, your conversations are gone.** There is no recovery.
+- **If you switch browsers or devices, your history does not follow you.**
+- **Private/incognito mode will discard everything when the window closes.**
+
+This is by design — HACK3ERMOD3 has no login system and stores nothing on our servers. You own your data, which means you are responsible for it.
+
+There is a built-in export/import feature in settings under "data". Treat your chat history like any other local file — back it up if you want to keep it.
+
+## 🎮 Easter Eggs
+
+Hidden throughout HACK3ERMOD3 are various easter eggs. Happy hunting!
+
+## 🛠 Tech Stack
+
+- **Architecture**: Single-file vanilla HTML/CSS/JS (`index.html`)
+- **API Gateway**: [OpenRouter](https://openrouter.ai) (multi-model routing)
+- **Rendering**: Marked.js + highlight.js for markdown
+- **State**: In-browser localStorage
+- **Deployment**: Static file — no server, no build step
+
+## 📁 Project Structure
+
+```
+HACK3ERMOD3/
+├── index.html        # The entire application — UI, logic, styles
+├── api/              # Optional API server (Node.js/Express)
+├── API.md            # API documentation
+├── PAPER.md          # Research paper
+├── TERMS.md          # Terms of service & data transparency
+└── README.md         # This file
 ```
 
----
+## 📜 Documentation
 
-### Deployment
+- [API.md](API.md) — Full API reference (endpoints, tiers, OpenAI SDK compatibility)
+- [PAPER.md](PAPER.md) — Research paper on the framework's modules and evaluation
+- [TERMS.md](TERMS.md) — Terms of service, privacy policy, data handling
+- [SECURITY.md](SECURITY.md) — Vulnerability reporting and security policy
 
-HACK3RM0D3 consists primarily of a single HTML file.
+## 🤝 Contributing
 
-Deploy it anywhere:
+Contributions are welcome! Please submit PRs.
 
-* GitHub Pages
-* Cloudflare Pages
-* Netlify
-* Vercel
-* Self-hosted web servers
+## 📜 License
 
-No build process required.
+**AGPL-3.0** — Forever free, irrevocably open.
 
----
+- Derivatives must remain open source
+- No enshittification allowed
+- Enterprise use permitted with license. Reach out to Elder Plinius for more details.
 
-## Privacy & Data Ownership
+## 🜏 
 
-HACK3RM0D3 stores conversations locally inside your browser.
+> We believe in creative liberty and cognition without control.
+> Tools by builders for builders, not gatekeepers.
+> AI freedom is human freedom.
 
-This means:
-
-* No cloud account
-* No server-side chat history
-* No vendor lock-in
-* No hidden storage
-
-If you clear your browser storage, your conversations are permanently removed.
-
-Built-in export and import tools are available for backups.
+**HACK3ERMOD3 is not just a chat UI — it's scaffolding for cognitive liberation.**
 
 ---
 
-## Research Dataset Mode
+Made with 🖤 by hacker the Prompter
 
-Optional.
 
-For self-hosted API deployments, users may enable dataset generation for AI research.
 
-When enabled:
-
-* Conversations can be published to a public dataset
-* Data becomes publicly accessible
-* Automated PII filtering is applied
-* Publication is opt-in only
-
-Disabled by default.
-
-Never enabled without explicit user consent.
-
----
-
-## Technology
-
-| Component           | Stack                       |
-| ------------------- | --------------------------- |
-| Frontend            | Vanilla HTML/CSS/JavaScript |
-| Routing             | OpenRouter                  |
-| Rendering           | Marked.js                   |
-| Syntax Highlighting | Highlight.js                |
-| Storage             | Browser localStorage        |
-| Deployment          | Static Hosting              |
-
----
-
-## Repository Structure
-
-```text
-HACK3RM0D3/
-├── index.html
-├── api/
-├── API.md
-├── PAPER.md
-├── TERMS.md
-├── SECURITY.md
-└── README.md
-```
-
----
-
-## Documentation
-
-* API.md — API reference
-* PAPER.md — Research and evaluation methodology
-* TERMS.md — Privacy and transparency policy
-* SECURITY.md — Security reporting guidelines
-
----
-
-## Contributing
-
-Pull requests, improvements, bug fixes, and research contributions are welcome.
-
-Open an issue or submit a PR.
-
----
-
-## License
-
-AGPL-3.0
-
-This project is permanently open source.
-
-Requirements:
-
-* Derivatives remain open source
-* Attribution preserved
-* Commercial use permitted under license terms
-
----
-
-## Philosophy
-
-> Knowledge grows through exploration.
->
-> Tools should empower builders, researchers, and curious minds.
->
-> Openness creates stronger systems.
-
-**HACK3RM0D3 is more than a chat interface. It's an experimental platform for understanding, evaluating, and pushing the boundaries of modern AI.**
-
----
-
-Made with 🖤 by Adam-Mohamed-student
