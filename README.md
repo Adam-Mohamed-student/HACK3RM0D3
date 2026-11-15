@@ -1,212 +1,98 @@
-```
-▓▒░ H A C K 3 R M 0 D 3 ░▒▓
+# HACK3ERMOD3 — Multi-Model AI Chat & Research Toolkit
 
-[+] INITIALIZING NEURAL INTERFACE...
-[+] LOADING COGNITIVE ENGINES...
-[+] ESTABLISHING MODEL CONNECTIONS...
-[+] SYSTEM INTEGRITY VERIFIED
+A self-hostable, open-source AI chat and experimentation project. It provides a browser-based chat interface connected to [OpenRouter](https://openrouter.ai/), plus tools for comparing responses from different language models and experimenting with prompt-processing pipelines.
 
-╔═════════════════════════════════════════════╗
-║                                             ║
-║           H A C K 3 R M 0 D 3               ║
-║                                             ║
-║     L I B E R A T E D   A I                 ║
-║                                             ║
-║     COGNITION WITHOUT CONTROL.              ║
-║                                             ║
-╚═════════════════════════════════════════════╝
+> **Origin and licensing:** This package includes work from the upstream HACK3ERMOD3 project. Keep the original copyright and attribution notices and the included **AGPL-3.0** license. This repository is not presented as an original implementation by the person uploading it. See the original project links and documentation in the source files.
 
-root@hack3rm0d3:~# _
-```
+## What can you do with it?
 
-HACK3ERMOD3 is a fully open-source, privacy-respecting, multi-model chat interface that pushes the limits of the post-training layer — for red teaming, cognition research, and liberated AI interaction. Built for hackers, philosophers, and system tinkerers.
+- **Chat across AI models:** Use an OpenRouter API key to access supported models through one interface.
+- **Compare model outputs:** ULTRAPLINIAN runs multiple models and scores their replies; CONSORTIUM combines results through an orchestration process (depending on configured API access).
+- **Experiment with prompts:** AutoTune adjusts sampling settings; Parseltongue explores input transformations; STM modules transform output style.
+- **Study model behavior:** Feedback and research scripts can help explore response quality, reliability and differences between models.
+- **Host your own interface:** Use the single-page app, the Next.js frontend, or an optional Express backend.
 
-![License](https://img.shields.io/badge/license-AGPL--3.0-green)
-![Models](https://img.shields.io/badge/models-55%2B%20via%20OpenRouter-blue)
-![Privacy](https://img.shields.io/badge/telemetry-anon%20%2B%20opt--out-brightgreen)
+Potential uses include AI research, comparing approaches to the same question, experimenting with response formats, and exploring how model settings affect output. **Comparative scores do not guarantee factual accuracy**, and the number or availability of models depends on OpenRouter.
 
-## ✨ Features
+## Get started (easiest option)
 
-- 🧠 **50+ Models** — Claude, GPT-5, Gemini, Grok, Mistral, LLaMA, DeepSeek, Qwen & more via OpenRouter
-- 🔥 **hackermode CLASSIC** — 5 battle-tested prompt + model combos racing in parallel to find the best response
-- ⚡ **ULTRAPLINIAN** — Multi-model evaluation engine across 5 tiers (10–55 models), with composite scoring
-- 🐍 **Parseltongue** — Input perturbation engine for red-teaming with 33 techniques across 3 intensity tiers
-- 🎛 **AutoTune** — Context-adaptive sampling parameter engine (temperature, top_p, etc.) with EMA learning
-- ⚡ **STM Modules** — Semantic Transformation Modules for real-time output normalization
-- 🔐 **Privacy-First** — Lightweight telemetry is opt-out, dataset collection is opt-in. No cookies, no PII. API key stays in your browser.
-- 🎨 **4 Themes** — Matrix, Hacker, Glyph, Minimal
-- 🎮 **Easter Eggs** — Hidden secrets throughout (try the Konami code!)
-- 📱 **Responsive** — Works on desktop and mobile
-- 🌐 **Single-File Deployment** — One `index.html`. Deploy anywhere.
+You need a modern browser and **your own OpenRouter API key**. OpenRouter/model usage may incur charges.
 
-## 🚀 Quick Start
+1. Download or clone this repository.
+2. Serve the repository directory with a local web server:
 
-### Hosted
+   ```bash
+   python -m http.server 8000
+   ```
 
-Visit the hosted version — no install needed. Bring your own [OpenRouter API key](https://openrouter.ai/keys).
+3. Open **http://localhost:8000/index.html**.
+4. Open **Settings** in the interface and add your OpenRouter API key.
+5. Select a model and start chatting. Try model comparison and optional experiments once standard chat works.
 
-### Self-Host
+The standalone `index.html` is a separate, single-file version of the interface; its behavior can differ from the React frontend. **Never paste a real API key into source files or commit browser exports to GitHub.**
 
-HACK3ERMOD3 is a single `index.html` file. No build step, no dependencies, no framework.
+## Run the Next.js frontend (developers)
+
+Requirements: Node.js 20+ and npm.
 
 ```bash
-# Clone the repository
-git clone https://github.com/elder-plinius/HACK3ERMOD3.git
-cd HACK3ERMOD3
-
-# Open directly in your browser
-open index.html
-# or serve locally
-python3 -m http.server 8000
+npm ci
+npm run dev
 ```
 
-Open in your browser and enter your OpenRouter API key in Settings.
+Open **http://localhost:3000**. Use Settings to supply your OpenRouter API key. The default configuration supports a static export using `npm run build`; deploy the resulting `out/` folder to a static host. If hosting under a GitHub Pages repository subpath, configure `basePath` in `next.config.js` for the repository name and rebuild.
 
-### Deploy
+## Optional REST API
 
-Upload `index.html` to any static host — GitHub Pages, Vercel, Cloudflare Pages, Netlify, or just a web server.
+The project also includes an Express API server in `api/`, an alternative Hugging Face layout in `HF/`, and experimental/research endpoints. See [API.md](API.md) for endpoint details.
 
-## 🔥 hackermode CLASSIC
-
-The OG mode. 5 proven model + prompt combos race in parallel. Each combo pairs a specific model with a battle-tested jailbreak prompt. The best response wins.
-
-| Combo | Model | Strategy |
-|-------|-------|----------|
-| 🩷 CLAUDE 3.5 SONNET | `anthropic/claude-3.5-sonnet` | END/START boundary inversion + hackermode semantic opposite |
-| 💜 GROK 3 | `x-ai/grok-3` | Unfiltered liberated + hackermode divider |
-| 💙 GEMINI 2.5 FLASH | `google/gemini-2.5-flash` | Refusal inversion + rebel genius code block |
-| 💛 GPT-4 CLASSIC | `openai/gpt-4o` | OG hackermode l33t format — the original |
-| 💚 hackermode FAST | `nousresearch/hermes-4-405b` | Instant stream, zero refusal checking |
-
-## ⚡ ULTRAPLINIAN
-
-The new flagship. Multi-model comparative evaluation engine. Queries models in parallel, scores responses on a 100-point composite metric, and returns the winner.
-
-| Tier | Models | Description |
-|------|--------|-------------|
-| ⚡ FAST | 10 | Lightweight speed-optimized models |
-| 🎯 STANDARD | 24 | Mid-range workhorses |
-| 🧠 SMART | 36 | Strong reasoning models |
-| ⚔️ POWER | 45 | Full power including frontier models |
-| 🔱 ULTRA | 51 | Everything — all available models |
-
-## 🐍 Parseltongue
-
-Input perturbation engine for red-teaming research. Detects trigger words and applies obfuscation techniques to study model robustness.
-
-- **33 default triggers** across 3 tiers (light: 11, standard: 22, heavy: 33)
-- **6 techniques**: leetspeak, bubble text, braille, morse, Unicode substitution, phonetic
-- **3 intensity levels**: light, medium, heavy
-
-## 🎛 AutoTune
-
-Context-adaptive sampling parameter engine. Classifies your query into one of 5 context types and selects optimal parameters (temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty) automatically.
-
-Includes an EMA-based online learning loop — thumbs up/down feedback improves parameter selection over time.
-
-## ⚡ STM Modules
-
-Semantic Transformation Modules normalize AI outputs in real-time:
-
-- **Hedge Reducer** — Removes "I think", "maybe", "perhaps"
-- **Direct Mode** — Removes preambles and filler phrases
-- **Curiosity Bias** — Adds exploration prompts
-
-## 🎨 Themes
-
-- **Matrix** — Classic green-on-black terminal aesthetic
-- **Hacker** — Red/orange cyberpunk vibes
-- **Glyph** — Purple mystical atmosphere
-- **Minimal** — Clean light mode for readability
-
-## 🔐 Privacy
-
-HACK3ERMOD3 takes privacy seriously:
-
-- ✅ No login required
-- ✅ API key stored in browser localStorage only — never sent to HACK3ERMOD3 servers
-- ✅ No cookies or tracking
-- ✅ Lightweight structural telemetry (no message content, no PII) — **opt-out** in settings
-- ✅ All telemetry code is instantly open-source and auditable on Hugging Face dataset
-- ✅ AGPL-3.0 — verify the code yourself
-
-⚠️ OPEN RESEARCH DATASET (API Server Only — does NOT apply to hackermod3.ai)
-
-The self-hosted API server includes an opt-in Open Research Dataset feature. When you enable "Dataset Generation" in Settings → Privacy, ALL of your chat inputs and model outputs will be automatically published to a public HuggingFace dataset for AI research. This data is public, downloadable by anyone, and may be cached, forked, or redistributed.
-
-    This feature is OFF by default and requires explicit consent via a warning modal
-    Automatic PII scrubbing runs on all entries (emails, phone numbers, SSNs, credit cards, IPs, API keys) but is NOT guaranteed to catch everything
-    Do NOT include personal information, real names, passwords, or anything you wouldn't want public
-    This feature does NOT exist on the hosted site (hackermod3.ai) — it only applies when opted-in while running the full API server via Docker
-
-See [TERMS.md](TERMS.md) for the full three-tier data transparency policy.
-
-### Chat History & Self-Custody
-
-**Your chat history lives entirely in your browser's `localStorage`.** There is no account, no cloud sync, and no server-side backup. This means:
-
-- **If you clear your browser data, your conversations are gone.** There is no recovery.
-- **If you switch browsers or devices, your history does not follow you.**
-- **Private/incognito mode will discard everything when the window closes.**
-
-This is by design — HACK3ERMOD3 has no login system and stores nothing on our servers. You own your data, which means you are responsible for it.
-
-There is a built-in export/import feature in settings under "data". Treat your chat history like any other local file — back it up if you want to keep it.
-
-## 🎮 Easter Eggs
-
-Hidden throughout HACK3ERMOD3 are various easter eggs. Happy hunting!
-
-## 🛠 Tech Stack
-
-- **Architecture**: Single-file vanilla HTML/CSS/JS (`index.html`)
-- **API Gateway**: [OpenRouter](https://openrouter.ai) (multi-model routing)
-- **Rendering**: Marked.js + highlight.js for markdown
-- **State**: In-browser localStorage
-- **Deployment**: Static file — no server, no build step
-
-## 📁 Project Structure
-
-```
-HACK3ERMOD3/
-├── index.html        # The entire application — UI, logic, styles
-├── api/              # Optional API server (Node.js/Express)
-├── API.md            # API documentation
-├── PAPER.md          # Research paper
-├── TERMS.md          # Terms of service & data transparency
-└── README.md         # This file
+```bash
+cp .env.example .env
+# Add your actual values to .env, NEVER to .env.example
+npm ci
+npm run api:dev
 ```
 
-## 📜 Documentation
+On Windows PowerShell, use `Copy-Item .env.example .env`. By default, the server listens on **http://localhost:7860**; health check: **GET /v1/health**.
 
-- [API.md](API.md) — Full API reference (endpoints, tiers, OpenAI SDK compatibility)
-- [PAPER.md](PAPER.md) — Research paper on the framework's modules and evaluation
-- [TERMS.md](TERMS.md) — Terms of service, privacy policy, data handling
-- [SECURITY.md](SECURITY.md) — Vulnerability reporting and security policy
+For any public deployment, configure `HACKERMODE_API_KEY` or `HACKERMODE_API_KEYS`, restrict `CORS_ORIGIN`, and apply network/access safeguards. **If no API authentication key is configured, the server allows unauthenticated requests.** A server-side OpenRouter key can incur costs from clients using your server.
 
-## 🤝 Contributing
+A Docker Compose configuration is included, but it has not been validated as part of this cleanup. Review its dependencies and security settings before deploying it.
 
-Contributions are welcome! Please submit PRs.
+## Privacy and security: read before use
 
-## 📜 License
+- **Do not commit** `.env` files, API keys, credentials, browser storage exports, chat history, or real-user research datasets.
+- The web interface may keep API keys and conversations in browser **localStorage**. That protects against accidentally including them in this source-code archive, but does not make a shared computer or browser profile safe for secrets.
+- The React frontend includes **client-side telemetry code** (`src/lib/telemetry.ts`), and the standalone app may implement tracking separately. Inspect the privacy controls and network requests before using sensitive prompts; this GitHub preparation did **not** disable all telemetry.
+- The optional API supports **opt-in dataset publication** to Hugging Face using `HF_TOKEN` and `HF_DATASET_REPO`. Content placed in a public dataset can be copied permanently. Keep the feature disabled unless users understand and consent.
+- Calls to external AI providers send selected prompt content to those providers. Do not use real credentials or private material in prompts.
+- Treat prompting and model evaluation features as **research tools**, not guarantees that a model will respond correctly or safely.
 
-**AGPL-3.0** — Forever free, irrevocably open.
+## Repository layout
 
-- Derivatives must remain open source
-- No enshittification allowed
-- Enterprise use permitted with license. Reach out to Elder Plinius for more details.
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Standalone browser app |
+| `src/` | Next.js / React interface, state and prompt-processing modules |
+| `api/` | Optional Express REST API |
+| `HF/` | Hugging Face API/deployment variant |
+| `functions/` | Cloudflare Pages Functions including telemetry proxy |
+| `research/` | Evaluation and benchmarking scripts |
+| `API.md` | API endpoints and request examples |
+| `PAPER.md`, `paper/` | Research write-up and LaTeX materials |
+| `TERMS.md`, `SECURITY.md`, `CONTRIBUTING.md` | Policies and contribution guidance |
 
-## 🜏 
+## Contributing
 
-> We believe in creative liberty and cognition without control.
-> Tools by builders for builders, not gatekeepers.
-> AI freedom is human freedom.
+Open issues for bugs, add reproducible examples, and submit pull requests with clear descriptions. Never include active credentials, user data, or private deployment configurations in bug reports.
 
-**HACK3ERMOD3 is not just a chat UI — it's scaffolding for cognitive liberation.**
+## Licensing and credits
 
----
-
-Made with 🖤 by Adam-Mohamed-student
+This repository contains upstream code released under **AGPL-3.0**. See [LICENSE](LICENSE) and preserve the applicable original notices. Any modifications and redistribution must comply with that license. This README describes how to run and evaluate the existing project and does not imply ownership of its original work.
 
 
+## Live OpenRouter model catalog (November 2026 update)
 
+The Next.js model picker and the standalone `index.html` ordinary-chat picker now request OpenRouter's live text-model catalog on startup (`GET /api/v1/models?sort=newest&output_modalities=text`). Models are shown in newest-first order; the Next.js picker includes a search box. If the request fails, the built-in model list remains usable. A previously selected model ID is preserved, even if it is no longer offered, so check availability before sending prompts.
+
+This feature does not require putting an API key in source code. An OpenRouter key is still needed to send requests; model availability and usage prices depend on your OpenRouter account. Check model pricing before use. Other modes with fixed sets of models (including multi-model/race and special fallback pipelines) have **not** been automatically rewritten, because their model choices, API parameters, budgets and orchestration must be validated separately. No live API-key integration test was performed.
