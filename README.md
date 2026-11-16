@@ -1,98 +1,237 @@
-# HACK3ERMOD3 — Multi-Model AI Chat & Research Toolkit
+<div align="center">
 
-A self-hostable, open-source AI chat and experimentation project. It provides a browser-based chat interface connected to [OpenRouter](https://openrouter.ai/), plus tools for comparing responses from different language models and experimenting with prompt-processing pipelines.
+```text
+╔════════════════════════════════════════════════════════════════════╗
+║                                                                    ║
+║                     H A C K 3 R M 0 D 3                            ║
+║                                                                    ║
+║           ░▒▓█  LIBERATED AI. COGNITION WITHOUT CONTROL.  █▓▒░     ║
+║                                                                    ║
+╚════════════════════════════════════════════════════════════════════╝
+```
 
-> **Origin and licensing:** This package includes work from the upstream HACK3ERMOD3 project. Keep the original copyright and attribution notices and the included **AGPL-3.0** license. This repository is not presented as an original implementation by the person uploading it. See the original project links and documentation in the source files.
+# HACK3RM0D3
 
-## What can you do with it?
+**One interface. Many models. A playground for AI experimentation.**
 
-- **Chat across AI models:** Use an OpenRouter API key to access supported models through one interface.
-- **Compare model outputs:** ULTRAPLINIAN runs multiple models and scores their replies; CONSORTIUM combines results through an orchestration process (depending on configured API access).
-- **Experiment with prompts:** AutoTune adjusts sampling settings; Parseltongue explores input transformations; STM modules transform output style.
-- **Study model behavior:** Feedback and research scripts can help explore response quality, reliability and differences between models.
-- **Host your own interface:** Use the single-page app, the Next.js frontend, or an optional Express backend.
+An open-source, self-hostable multi-model AI chat and research toolkit powered by [OpenRouter](https://openrouter.ai/). Chat with different AI models, compare their responses, experiment with model parameters, and explore AI behavior in one place.
 
-Potential uses include AI research, comparing approaches to the same question, experimenting with response formats, and exploring how model settings affect output. **Comparative scores do not guarantee factual accuracy**, and the number or availability of models depends on OpenRouter.
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-22c55e?style=for-the-badge)](LICENSE)
+[![OpenRouter](https://img.shields.io/badge/Models-OpenRouter-6366f1?style=for-the-badge)](https://openrouter.ai/)
+![Self-hostable](https://img.shields.io/badge/Deploy-Self--hosted-0ea5e9?style=for-the-badge)
+![Status](https://img.shields.io/badge/Build-Experimental-f59e0b?style=for-the-badge)
 
-## Get started (easiest option)
+**[Features](#-features) · [Quick start](#-quick-start) · [Model catalog](#-openrouter-model-catalog) · [How it helps](#-why-use-hack3rm0d3) · [Privacy](#-privacy--security) · [Docs](#-documentation)**
 
-You need a modern browser and **your own OpenRouter API key**. OpenRouter/model usage may incur charges.
+</div>
 
-1. Download or clone this repository.
-2. Serve the repository directory with a local web server:
+> [!IMPORTANT]
+> **Project origin:** This repository contains and modifies the upstream **HACK3ERMOD3** open-source project. Its code is not an original implementation by the person publishing this fork. Preserve all required upstream credits, copyright notices, and [AGPL-3.0](LICENSE) obligations. The `HACK3RM0D3` spelling here is the presentation name for this distribution; some internal filenames and identifiers retain upstream naming.
 
-   ```bash
-   python -m http.server 8000
-   ```
+---
 
-3. Open **http://localhost:8000/index.html**.
-4. Open **Settings** in the interface and add your OpenRouter API key.
-5. Select a model and start chatting. Try model comparison and optional experiments once standard chat works.
+## ⚡ At a glance
 
-The standalone `index.html` is a separate, single-file version of the interface; its behavior can differ from the React frontend. **Never paste a real API key into source files or commit browser exports to GitHub.**
+| | |
+|---|---|
+| **Multi-model chat** | Access supported AI models through OpenRouter using your own key. |
+| **Live model discovery** | Browse a current, searchable catalog in the Next.js frontend; the standalone app also refreshes its ordinary-chat list. |
+| **Model comparison** | Evaluate different answers using multi-model research and orchestration modes. |
+| **Prompt experiments** | Explore adaptive parameters, transformations, and output formatting modules. |
+| **Flexible deployment** | Run a standalone HTML app, a Next.js frontend, or an optional Express API. |
+| **Local-first history** | Browser-side storage for chat history and settings; review privacy caveats below. |
 
-## Run the Next.js frontend (developers)
+## ✨ Features
 
-Requirements: Node.js 20+ and npm.
+### 🧠 Chat with different AI models
+
+Choose from models available to your OpenRouter account, including offerings from major AI providers. The ordinary-chat model picker now retrieves a **live text-model catalog**, so newly listed models can appear without editing a hardcoded array.
+
+### ⚔️ Compare responses
+
+- **hackermode CLASSIC:** A preset multi-model prompt-and-response comparison workflow.
+- **ULTRAPLINIAN:** Tier-based parallel model evaluation with a composite response score.
+- **CONSORTIUM:** A separate model-orchestration and synthesis workflow in the supported API/frontend paths.
+
+Scores are experimental comparisons, **not proof that an answer is true**. Multi-model modes may use several paid API calls for one question.
+
+### 🧪 Experiment with model behavior
+
+- **AutoTune:** Context-sensitive generation settings, including feedback-based adjustment.
+- **Parseltongue:** Input transformation and robustness-testing techniques.
+- **STM (Semantic Transformation Modules):** Output-style transformations, including direct-answer formatting and hedge reduction.
+- **Research scripts:** Evaluation and analysis utilities in `research/`.
+
+### 🎨 Built for exploration
+
+The upstream standalone interface includes themed UI options, responsive layouts, chat history controls, and hidden extras. The Next.js interface offers a separate React-based experience, so features can differ between the two.
+
+---
+
+## 🚀 Quick start
+
+### Option A — Run the standalone app (simplest)
+
+**You need:** a modern browser, Python (or another local static server), and an [OpenRouter API key](https://openrouter.ai/keys).
+
+```bash
+# Clone your fork/repository (replace the URL with your own)
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+cd YOUR_REPOSITORY
+
+# Serve the project locally
+python -m http.server 8000
+```
+
+Open **http://localhost:8000/index.html**, then:
+
+1. Open **Settings**.
+2. Enter your own OpenRouter API key.
+3. Choose a model from the model selector.
+4. Start a conversation, or try the experimental modes.
+
+> [!TIP]
+> This version requires **no frontend build step**. You can also deploy `index.html` on a static web host. Using a local server is usually more reliable than opening the file directly.
+
+### Option B — Run the Next.js app
+
+**You need:** Node.js 20+ and npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Open **http://localhost:3000**. Use Settings to supply your OpenRouter API key. The default configuration supports a static export using `npm run build`; deploy the resulting `out/` folder to a static host. If hosting under a GitHub Pages repository subpath, configure `basePath` in `next.config.js` for the repository name and rebuild.
-
-## Optional REST API
-
-The project also includes an Express API server in `api/`, an alternative Hugging Face layout in `HF/`, and experimental/research endpoints. See [API.md](API.md) for endpoint details.
+Open **http://localhost:3000**, add your API key in Settings, and choose a model. To create a static production export:
 
 ```bash
+npm run build
+```
+
+The exported site is written to `out/`. For a GitHub Pages repository subpath, update `basePath` in `next.config.js` first and rebuild.
+
+### Option C — Run the optional REST API
+
+The repository also contains an Express API in `api/` and an alternate `HF/` variant.
+
+```bash
+# macOS / Linux
 cp .env.example .env
-# Add your actual values to .env, NEVER to .env.example
+
+# Windows PowerShell:
+# Copy-Item .env.example .env
+
+# Edit .env with your own settings, then:
 npm ci
 npm run api:dev
 ```
 
-On Windows PowerShell, use `Copy-Item .env.example .env`. By default, the server listens on **http://localhost:7860**; health check: **GET /v1/health**.
+Default address: **http://localhost:7860**  
+Health endpoint: **`GET /v1/health`**  
+Full endpoints and examples: **[API.md](API.md)**
 
-For any public deployment, configure `HACKERMODE_API_KEY` or `HACKERMODE_API_KEYS`, restrict `CORS_ORIGIN`, and apply network/access safeguards. **If no API authentication key is configured, the server allows unauthenticated requests.** A server-side OpenRouter key can incur costs from clients using your server.
+> [!WARNING]
+> **Before exposing the API publicly:** configure `HACKERMODE_API_KEY` or `HACKERMODE_API_KEYS`, restrict `CORS_ORIGIN`, and add appropriate network protections. Without API authentication configured, the server can accept unauthenticated requests. A server-side OpenRouter key can incur usage charges.
 
-A Docker Compose configuration is included, but it has not been validated as part of this cleanup. Review its dependencies and security settings before deploying it.
+---
 
-## Privacy and security: read before use
+## 🔄 OpenRouter model catalog
 
-- **Do not commit** `.env` files, API keys, credentials, browser storage exports, chat history, or real-user research datasets.
-- The web interface may keep API keys and conversations in browser **localStorage**. That protects against accidentally including them in this source-code archive, but does not make a shared computer or browser profile safe for secrets.
-- The React frontend includes **client-side telemetry code** (`src/lib/telemetry.ts`), and the standalone app may implement tracking separately. Inspect the privacy controls and network requests before using sensitive prompts; this GitHub preparation did **not** disable all telemetry.
-- The optional API supports **opt-in dataset publication** to Hugging Face using `HF_TOKEN` and `HF_DATASET_REPO`. Content placed in a public dataset can be copied permanently. Keep the feature disabled unless users understand and consent.
-- Calls to external AI providers send selected prompt content to those providers. Do not use real credentials or private material in prompts.
-- Treat prompting and model evaluation features as **research tools**, not guarantees that a model will respond correctly or safely.
+**Updated November 15, 2026.** Regular chat no longer has to rely exclusively on the original fixed model list.
 
-## Repository layout
+```text
+OpenRouter model catalog
+          │
+          ▼
+Fetch currently listed text-capable models
+          │
+          ├── Success → display current models, newest first
+          │                 └── Search by name/provider (Next.js)
+          │
+          └── Failure → fall back to bundled model choices
+```
 
-| Path | Purpose |
-| --- | --- |
-| `index.html` | Standalone browser app |
-| `src/` | Next.js / React interface, state and prompt-processing modules |
-| `api/` | Optional Express REST API |
-| `HF/` | Hugging Face API/deployment variant |
-| `functions/` | Cloudflare Pages Functions including telemetry proxy |
-| `research/` | Evaluation and benchmarking scripts |
-| `API.md` | API endpoints and request examples |
-| `PAPER.md`, `paper/` | Research write-up and LaTeX materials |
-| `TERMS.md`, `SECURITY.md`, `CONTRIBUTING.md` | Policies and contribution guidance |
+The standalone `index.html` and the Next.js ordinary-chat selector support catalog refreshes. Existing model selections are preserved where possible, but an old saved model might no longer be available. **Special model-race, scoring, and orchestration presets still use their own selections**; those were not automatically migrated.
 
-## Contributing
+See **[OPENROUTER_UPDATE_NOTES.md](OPENROUTER_UPDATE_NOTES.md)** for the exact scope and limitations. Model pricing, account permissions, and support for particular request parameters can change; verify them before running large comparisons.
 
-Open issues for bugs, add reproducible examples, and submit pull requests with clear descriptions. Never include active credentials, user data, or private deployment configurations in bug reports.
+## 💡 Why use HACK3RM0D3?
 
-## Licensing and credits
+| Use case | How this project helps |
+|---|---|
+| **Students and learners** | Compare different explanations of a concept and spot where models disagree. |
+| **Developers** | Experiment with model behavior, sampling parameters, and API workflows. |
+| **Researchers** | Explore prompt transformations, output processing, and model comparisons. |
+| **AI enthusiasts** | Try multiple providers from one customizable interface. |
+| **Self-hosters** | Keep control of deployment and inspect the application source code. |
 
-This repository contains upstream code released under **AGPL-3.0**. See [LICENSE](LICENSE) and preserve the applicable original notices. Any modifications and redistribution must comply with that license. This README describes how to run and evaluate the existing project and does not imply ownership of its original work.
+**Remember:** Model outputs can be inaccurate, and OpenRouter requests may cost money even when the interface itself is self-hosted.
 
+---
 
-## Live OpenRouter model catalog (November 2026 update)
+## 🛡️ Privacy & security
 
-The Next.js model picker and the standalone `index.html` ordinary-chat picker now request OpenRouter's live text-model catalog on startup (`GET /api/v1/models?sort=newest&output_modalities=text`). Models are shown in newest-first order; the Next.js picker includes a search box. If the request fails, the built-in model list remains usable. A previously selected model ID is preserved, even if it is no longer offered, so check availability before sending prompts.
+The project is open-source and can be self-hosted, but **self-hosted does not mean entirely offline or automatically private**.
 
-This feature does not require putting an API key in source code. An OpenRouter key is still needed to send requests; model availability and usage prices depend on your OpenRouter account. Check model pricing before use. Other modes with fixed sets of models (including multi-model/race and special fallback pipelines) have **not** been automatically rewritten, because their model choices, API parameters, budgets and orchestration must be validated separately. No live API-key integration test was performed.
+- **Your API key:** Enter it through the app's settings; do not hardcode it into files or commit it to GitHub. The browser interface can keep keys in `localStorage`.
+- **Your conversations:** Chat history may be stored in the browser. Clearing browser storage can delete it; use the application's export/import controls if you need backups.
+- **Third-party model providers:** Requests sent through OpenRouter are processed by external services under their respective policies.
+- **Telemetry:** The frontend contains client-side telemetry functionality. Inspect the controls and network calls before entering sensitive content; this distribution does **not** claim telemetry is globally disabled.
+- **Public research dataset:** The optional API includes an **opt-in** Hugging Face dataset publishing feature. If enabled, user inputs and model outputs may become publicly accessible. Automatic redaction cannot be guaranteed to remove all private information.
+- **Repository hygiene:** `.gitignore` covers common local secrets and generated files; **always review `git diff --cached` before publishing**.
+
+Read **[TERMS.md](TERMS.md)**, **[SECURITY.md](SECURITY.md)**, and **[GITHUB_SECURITY_REVIEW.md](GITHUB_SECURITY_REVIEW.md)** before sharing or deploying the project.
+
+## 🗂️ Repository structure
+
+```text
+HACK3RM0D3/
+├── index.html                   # Standalone browser interface
+├── src/                         # Next.js / React application
+├── public/                      # Static assets
+├── api/                         # Optional Express API
+├── HF/                          # Hugging Face deployment variant
+├── functions/                   # Cloudflare-related functions
+├── research/                    # Evaluation and experiment scripts
+├── paper/                       # Research paper sources
+├── API.md                       # API documentation
+├── OPENROUTER_UPDATE_NOTES.md   # Model-catalog changes
+├── GITHUB_SECURITY_REVIEW.md    # Publication security checklist
+├── TERMS.md                     # Data-handling terms
+├── SECURITY.md                  # Security guidance
+├── CONTRIBUTING.md              # Contribution guidance
+└── LICENSE                      # AGPL-3.0 license
+```
+
+## 📚 Documentation
+
+| Document | What you'll find |
+|---|---|
+| [API.md](API.md) | Server API details and usage examples |
+| [OPENROUTER_UPDATE_NOTES.md](OPENROUTER_UPDATE_NOTES.md) | Live-model discovery changes and caveats |
+| [PAPER.md](PAPER.md) | Research background and implementation details |
+| [TERMS.md](TERMS.md) | Data collection, privacy and related terms |
+| [SECURITY.md](SECURITY.md) | Reporting and security expectations |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Guidance for contributors |
+
+## 🤝 Contributing
+
+Issues, reproducible bug reports, documentation fixes, and pull requests are welcome. Please do not include credentials, user chats, or private datasets in issues or commits. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+
+## ⚖️ License & acknowledgments
+
+This distribution builds upon the upstream **HACK3ERMOD3** project, associated with **Elder Plinius / hacker the Prompter** in the original README. The upstream project is licensed under **[AGPL-3.0](LICENSE)**. Keep the original notices intact and follow the license when distributing modifications or running a modified network service.
+
+**Upstream project:** [elder-plinius/HACK3ERMOD3](https://github.com/elder-plinius/HACK3ERMOD3)
+
+---
+
+<div align="center">
+
+**`HACK3RM0D3`**
+
+*LIBERATED AI. COGNITION WITHOUT CONTROL.*
+
+<sub>Explore thoughtfully · Verify outputs · Protect your data</sub>
+
+</div>
