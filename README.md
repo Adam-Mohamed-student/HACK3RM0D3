@@ -25,9 +25,6 @@ An open-source, self-hostable multi-model AI chat and research toolkit powered b
 
 </div>
 
-> [!IMPORTANT]
-> **Project origin:** This repository contains and modifies the upstream **HACK3ERMOD3** open-source project. Its code is not an original implementation by the person publishing this fork. Preserve all required upstream credits, copyright notices, and [AGPL-3.0](LICENSE) obligations. The `HACK3RM0D3` spelling here is the presentation name for this distribution; some internal filenames and identifiers retain upstream naming.
-
 ---
 
 ## ⚡ At a glance
@@ -64,7 +61,7 @@ Scores are experimental comparisons, **not proof that an answer is true**. Multi
 
 ### 🎨 Built for exploration
 
-The upstream standalone interface includes themed UI options, responsive layouts, chat history controls, and hidden extras. The Next.js interface offers a separate React-based experience, so features can differ between the two.
+The standalone interface includes themed UI options, responsive layouts, chat history controls, and hidden extras. The Next.js interface offers a separate React-based experience, so features can differ between the two.
 
 ---
 
@@ -218,11 +215,9 @@ HACK3RM0D3/
 
 Issues, reproducible bug reports, documentation fixes, and pull requests are welcome. Please do not include credentials, user chats, or private datasets in issues or commits. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
-## ⚖️ License & acknowledgments
+## ⚖️ License
 
-This distribution builds upon the upstream **HACK3ERMOD3** project, associated with **Elder Plinius / hacker the Prompter** in the original README. The upstream project is licensed under **[AGPL-3.0](LICENSE)**. Keep the original notices intact and follow the license when distributing modifications or running a modified network service.
-
-**Upstream project:** [elder-plinius/HACK3ERMOD3](https://github.com/elder-plinius/HACK3ERMOD3)
+Licensed under **[AGPL-3.0](LICENSE)**. Retain applicable copyright and license notices when distributing modified versions.
 
 ---
 
