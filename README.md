@@ -21,7 +21,7 @@ An open-source, self-hostable multi-model AI chat and research toolkit powered b
 ![Self-hostable](https://img.shields.io/badge/Deploy-Self--hosted-0ea5e9?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Build-Experimental-f59e0b?style=for-the-badge)
 
-**[Features](#-features) · [Quick start](#-quick-start) · [Model catalog](#-openrouter-model-catalog) · [How it helps](#-why-use-hack3rm0d3) · [Privacy](#-privacy--security) · [Docs](#-documentation)**
+**[Features](#-features) · [Quick start](#-quick-start) · [Model catalog](#-openrouter-model-catalog) · [Why use it?](#-why-use-hack3rm0d3) · [Privacy](#-privacy--security) · [Documentation](#-documentation)**
 
 </div>
 
@@ -72,15 +72,17 @@ The standalone interface includes themed UI options, responsive layouts, chat hi
 **You need:** a modern browser, Python (or another local static server), and an [OpenRouter API key](https://openrouter.ai/keys).
 
 ```bash
-# Clone your fork/repository (replace the URL with your own)
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
+# Clone HACK3RM0D3
+git clone https://github.com/Adam-Mohamed-student/HACK3RM0D3.git
+cd HACK3RM0D3
 
-# Serve the project locally
+# Start a local web server
 python -m http.server 8000
 ```
 
-Open **http://localhost:8000/index.html**, then:
+Open **http://localhost:8000/index.html** in your browser. If `python` isn't recognized on Windows, try `py -m http.server 8000` instead.
+
+Then:
 
 1. Open **Settings**.
 2. Enter your own OpenRouter API key.
@@ -105,7 +107,7 @@ Open **http://localhost:3000**, add your API key in Settings, and choose a model
 npm run build
 ```
 
-The exported site is written to `out/`. For a GitHub Pages repository subpath, update `basePath` in `next.config.js` first and rebuild.
+The exported site is written to `out/`. For GitHub Pages hosting at `https://adam-mohamed-student.github.io/HACK3RM0D3/`, uncomment and set `basePath: '/HACK3RM0D3'` in `next.config.js` before rebuilding. You will also need to configure GitHub Pages deployment; `npm run build` alone does not publish the site.
 
 ### Option C — Run the optional REST API
 
@@ -150,7 +152,7 @@ Fetch currently listed text-capable models
 
 The standalone `index.html` and the Next.js ordinary-chat selector support catalog refreshes. Existing model selections are preserved where possible, but an old saved model might no longer be available. **Special model-race, scoring, and orchestration presets still use their own selections**; those were not automatically migrated.
 
-See **[OPENROUTER_UPDATE_NOTES.md](OPENROUTER_UPDATE_NOTES.md)** for the exact scope and limitations. Model pricing, account permissions, and support for particular request parameters can change; verify them before running large comparisons.
+Model pricing, account permissions, and support for particular request parameters can change; verify them before running large comparisons.
 
 ## 💡 Why use HACK3RM0D3?
 
@@ -192,7 +194,6 @@ HACK3RM0D3/
 ├── research/                    # Evaluation and experiment scripts
 ├── paper/                       # Research paper sources
 ├── API.md                       # API documentation
-├── OPENROUTER_UPDATE_NOTES.md   # Model-catalog changes
 ├── GITHUB_SECURITY_REVIEW.md    # Publication security checklist
 ├── TERMS.md                     # Data-handling terms
 ├── SECURITY.md                  # Security guidance
@@ -205,7 +206,6 @@ HACK3RM0D3/
 | Document | What you'll find |
 |---|---|
 | [API.md](API.md) | Server API details and usage examples |
-| [OPENROUTER_UPDATE_NOTES.md](OPENROUTER_UPDATE_NOTES.md) | Live-model discovery changes and caveats |
 | [PAPER.md](PAPER.md) | Research background and implementation details |
 | [TERMS.md](TERMS.md) | Data collection, privacy and related terms |
 | [SECURITY.md](SECURITY.md) | Reporting and security expectations |
