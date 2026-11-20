@@ -59,12 +59,12 @@ These modes may invoke multiple models per request and **can cost more than a si
 - **AutoTune** — context-aware generation parameters and feedback-driven adjustments.
 - **Parseltongue** — input transformations and robustness experiments.
 - **STM (Semantic Transformation Modules)** — configurable output-style transformations.
-- **Research tools** — scripts for evaluation, sampling, and analysis in the \`research/\` folder.
+- **Research tools** — scripts for evaluation, sampling, and analysis in the `research/` folder.
 
 ### 🎨 Interface Options
-- Standalone browser interface in \`index.html\`.
-- React / Next.js interface in \`src/\`.
-- Optional Express API in \`api/\`, with a separate Hugging Face deployment variant in \`HF/\`.
+- Standalone browser interface in `index.html`.
+- React / Next.js interface in `src/`.
+- Optional Express API in `api/`, with a separate Hugging Face deployment variant in `HF/`.
 
 The standalone interface and React interface are separate implementations; **some features differ between them**.
 
@@ -78,18 +78,18 @@ The standalone interface and React interface are separate implementations; **som
 
 **1. Clone the project**
 
-\`\`\`bash
+```bash
 git clone https://github.com/Adam-Mohamed-student/HACK3RM0D3.git
 cd HACK3RM0D3
-\`\`\`
+```
 
 **2. Start a local web server**
 
-\`\`\`bash
+```bash
 python -m http.server 8000
-\`\`\`
+```
 
-On Windows, if \`python\` is not recognized, try \`py -m http.server 8000\`.
+On Windows, if `python` is not recognized, try `py -m http.server 8000`.
 
 **3. Open the application**
 
@@ -112,24 +112,24 @@ All commands in this section are run from the **root directory** of the cloned r
 
 **Requirements:** Node.js 20+ and npm.
 
-\`\`\`bash
+```bash
 git clone https://github.com/Adam-Mohamed-student/HACK3RM0D3.git
 cd HACK3RM0D3
 npm ci
 npm run dev
-\`\`\`
+```
 
 Open **http://localhost:3000**, configure your OpenRouter API key in Settings, and choose a model.
 
 For a static production export:
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
-With the current \`next.config.js\`, the static build is written to **\`out/\`**. Deploy that folder to a static host.
+With the current `next.config.js`, the static build is written to **`out/`**. Deploy that folder to a static host.
 
-**GitHub Pages:** If publishing to \`https://adam-mohamed-student.github.io/HACK3RM0D3/\`, configure \`basePath: '/HACK3RM0D3'\` in \`next.config.js\` before building. A build alone does not enable GitHub Pages; configure deployment in the repository settings or a workflow.
+**GitHub Pages:** If publishing to `https://adam-mohamed-student.github.io/HACK3RM0D3/`, configure `basePath: '/HACK3RM0D3'` in `next.config.js` before building. A build alone does not enable GitHub Pages; configure deployment in the repository settings or a workflow.
 
 ### Option 3 — Optional REST API
 
@@ -139,38 +139,38 @@ With the current \`next.config.js\`, the static build is written to **\`out/\`**
 
 macOS / Linux:
 
-\`\`\`bash
+```bash
 cp .env.example .env
-\`\`\`
+```
 
 Windows PowerShell:
 
-\`\`\`powershell
+```powershell
 Copy-Item .env.example .env
-\`\`\`
+```
 
-**2. Edit \`.env\` with your own settings**
+**2. Edit `.env` with your own settings**
 
-\`\`\`dotenv
+```dotenv
 PORT=7860
 OPENROUTER_API_KEY=
 HACKERMODE_API_KEY=
 CORS_ORIGIN=http://localhost:3000
 HF_TOKEN=
 HF_DATASET_REPO=
-\`\`\`
+```
 
-- \`OPENROUTER_API_KEY\`: optional server-side model key; requests may incur costs.
-- \`HACKERMODE_API_KEY\`: set a strong secret before making the API accessible to others.
-- \`CORS_ORIGIN\`: allowed frontend origin.
-- \`HF_TOKEN\` and \`HF_DATASET_REPO\`: optional dataset publishing settings; leave unset unless intentionally using this feature.
+- `OPENROUTER_API_KEY`: optional server-side model key; requests may incur costs.
+- `HACKERMODE_API_KEY`: set a strong secret before making the API accessible to others.
+- `CORS_ORIGIN`: allowed frontend origin.
+- `HF_TOKEN` and `HF_DATASET_REPO`: optional dataset publishing settings; leave unset unless intentionally using this feature.
 
 **3. Install dependencies and start the API**
 
-\`\`\`bash
+```bash
 npm ci
 npm run api:dev
-\`\`\`
+```
 
 Default API address: **http://localhost:7860**  
 Health check: **http://localhost:7860/v1/health**
@@ -182,18 +182,18 @@ For API routes and example requests, see **[API.md](API.md)**.
 
 ### Option 4 — Docker Compose (optional)
 
-The repository includes \`docker-compose.yml\`, \`Dockerfile\`, and \`Dockerfile.web\` for a web + API deployment.
+The repository includes `docker-compose.yml`, `Dockerfile`, and `Dockerfile.web` for a web + API deployment.
 
-\`\`\`bash
+```bash
 # After cloning and entering HACK3RM0D3:
 cp .env.example .env
 # Configure .env with the necessary keys/settings
 docker compose up --build -d
-\`\`\`
+```
 
-On Windows PowerShell use \`Copy-Item .env.example .env\` instead of \`cp\`.
+On Windows PowerShell use `Copy-Item .env.example .env` instead of `cp`.
 
-The Compose file maps the frontend to **http://localhost:3000** by default (\`WEB_PORT\` can override the port).
+The Compose file maps the frontend to **http://localhost:3000** by default (`WEB_PORT` can override the port).
 
 This configuration is included in the source, **but has not been end-to-end validated here**. Review the environment, API access controls, and deployment configuration before public use.
 
@@ -203,9 +203,9 @@ This configuration is included in the source, **but has not been end-to-end vali
 
 HACK3RM0D3's **ordinary chat model picker** requests OpenRouter's text-model catalog:
 
-\`\`\`http
+```http
 GET https://openrouter.ai/api/v1/models?sort=newest&output_modalities=text
-\`\`\`
+```
 
 - Recently listed models can appear without a manual code update.
 - The **Next.js selector** supports searching for a model.
@@ -237,7 +237,7 @@ Model outputs can be wrong. Verify important information before relying on it.
 
 ## 🔐 Privacy & Security
 
-- **Never commit API keys or secrets** into the repository. Keep \`.env\` private.
+- **Never commit API keys or secrets** into the repository. Keep `.env` private.
 - The browser interfaces can use **localStorage** for settings, keys, or conversation data. Avoid entering sensitive information on shared browsers.
 - Requests to OpenRouter and downstream model providers are processed by external services.
 - The project contains **client-side telemetry functionality**; review its implementation before entering sensitive prompts.
@@ -250,7 +250,7 @@ Read [SECURITY.md](SECURITY.md), [TERMS.md](TERMS.md), and [GITHUB_SECURITY_REVI
 
 ## 📂 Project Structure
 
-\`\`\`text
+```text
 HACK3RM0D3/
 ├── index.html                 # Standalone web app
 ├── src/                       # Next.js / React frontend
@@ -267,7 +267,7 @@ HACK3RM0D3/
 ├── API.md                     # API reference
 ├── OPENROUTER_UPDATE_NOTES.md # OpenRouter catalog changes
 └── README.md
-\`\`\`
+```
 
 ## 📚 Documentation
 
@@ -284,12 +284,12 @@ HACK3RM0D3/
 
 | Issue | Try this |
 | --- | --- |
-| \`python\` isn't recognized | Install Python 3 or use \`py -m http.server 8000\` on Windows |
-| \`npm\` isn't recognized | Install Node.js 20+ with npm |
+| `python` isn't recognized | Install Python 3 or use `py -m http.server 8000` on Windows |
+| `npm` isn't recognized | Install Node.js 20+ with npm |
 | Port 3000 or 8000 is occupied | Stop the other process or use an available port |
 | Model list won't load | Check your network connection; the fallback models may still appear |
 | OpenRouter request fails | Check your API key, available balance, model ID, and provider availability |
-| GitHub Pages shows missing assets | Check the \`basePath\` setting and rebuild the static export |
+| GitHub Pages shows missing assets | Check the `basePath` setting and rebuild the static export |
 
 ---
 
